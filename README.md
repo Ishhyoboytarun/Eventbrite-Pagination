@@ -6,7 +6,7 @@
 The problem involves adapting a third-party web service to follow a specific pagination policy. The web service only accepts a page number and returns 10 items per page, without any metadata. The goal is to adapt the service to conform to a pagination policy that includes metadata and accepts a specific number of items per page. The pagination policy requires that methods returning more than 50 records should be paged and should return an object including metadata that describes the total count of items, the page number, the number of items per page, and an array of items for the given page. The method should accept a page number and the number of items per page, and should return the string "404" when a page is requested that does not exist.
 
 ## Pagination Policy
-
+```
 1. Methods returning more than 50 records should be paged.
 2. Paged methods should return an object including meta data
   a) total _count gives the total count of items available in the service
@@ -18,6 +18,7 @@ The problem involves adapting a third-party web service to follow a specific pag
     • page _number is 1-indexed, meaning the first page of valid results is page 1
   b) items_per_page defining the number of items on any given page
 4. Paged methods should return the string "404" when a page is requested that does not exist.
+```
 
 ## Solution
 
